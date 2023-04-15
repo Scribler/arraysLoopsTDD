@@ -1,0 +1,7 @@
+# /package-lock.json
+# /package.json
+/public
+/*.xopp
+/*.vim
+# /node_modules
+# /src/assets
