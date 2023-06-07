@@ -1,8 +1,11 @@
 // Reset/normalize
 @use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 html {
   box-sizing: border-box;
+  background-color: var(--off-white);
+  color: var(--black);
 }
 
 *, *::before, *::after {

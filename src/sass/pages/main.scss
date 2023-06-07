@@ -1,3 +1,36 @@
-// @use '../abstracts/variables' as *;
-// @use '../components/buttons' as *;
+@use '../abstracts/variables' as *;
+@use '../components/buttons' as *;
 
+.main {
+  // background-color: blue;
+  height: 100vh;
+  width: 100vw;
+}
+.header-heading {
+  text-align: center;
+}
+section {
+  padding: 20px 20px;
+  border: 2px solid var(--black);
+  border-radius: 30px;
+  margin: 15px;
+
+}
+.sectHero {
+  font-size: 2.0em;
+  text-decoration: underline;
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+
+#arrayOutput p {
+  padding: 5px 0 5px 25px;
+}
+
+.posAnswer {
+  color: green;
+}
+.negAnswer {
+  color: red;
+}
