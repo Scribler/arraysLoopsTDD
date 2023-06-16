@@ -34,3 +34,16 @@ section {
 .negAnswer {
   color: red;
 }
+
+// CANVAS AREA
+#canvasArea {
+  button {
+    position: absolute;
+    margin: 10px 0 0 10px;
+  }
+}
+canvas {
+  height: 250px;
+  width: 100%;
+  background-color: beige;
+}

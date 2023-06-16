@@ -57,6 +57,47 @@ arrOut.innerHTML += `<p> - ADD TEXT AREA AND BUTTON HERE: <span class="negAnswer
 // Loops Area
 //
 
+let circleColors = ['rgba(185, 152, 244,0.5)', 'rgba(255,0,0,0.5)', 'yellow', 'blue'];
+
+const btn = document.getElementById("canvasButton");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+document.addEventListener("DOMContentLoaded", () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+});
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function drawLoop(color, repetitions) {
+  for (let i = 0; i < repetitions; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI
+    );
+    ctx.fill();
+  }
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  circleColors.forEach(element => {
+    drawLoop(element, 20);
+  });
+  // drawLoop('blue', 20);
+  // drawLoop('green', 20);
+  // drawLoop('rgba(255,0,0,0.5)', 90);
+}
+
+btn.addEventListener("click", draw);
 
 
 //
