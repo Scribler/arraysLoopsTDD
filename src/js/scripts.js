@@ -54,9 +54,10 @@ arrOut.innerHTML += `<p> - ADD TEXT AREA AND BUTTON HERE: <span class="negAnswer
 //
 
 //
-// Loops Area
+// LOOPS AREA
 //
 
+// Canvas Loops Area
 let circleColors = ['rgba(185, 152, 244,0.5)', 'rgba(255,0,0,0.5)', 'yellow', 'blue'];
 
 const btn = document.getElementById("canvasButton");
@@ -98,10 +99,19 @@ function draw() {
 }
 
 btn.addEventListener("click", draw);
+// Canvas Loops Area End
 
+// Array Loops
+console.log("Looping through arrays!");
+for (const item of backPack) {
+  console.log(item);
+}
+
+
+// Array Loops End
 
 //
-// Loops Area END
+// LOOPS AREA END
 //
 
 
