@@ -101,11 +101,41 @@ function draw() {
 btn.addEventListener("click", draw);
 // Canvas Loops Area End
 
-// Array Loops
-console.log("Looping through arrays!");
-for (const item of backPack) {
-  console.log(item);
+// Array Loops 
+// --build cards for each input set--
+const maintenanceItem = {
+  serviceUrgency: function() {
+    // let urgency;
+    if (this.needService == 0) {
+      return "No service required at this time.";
+    } else if (this.needService == 1) {
+      return "Item needs servicing";
+    } else if (this.needService == 2) {
+      return "Service item IMMEDIATELY! URGENT!";
+    } else {
+      return "No value";
+    }
+  },
+  logDetails: function() {
+    console.log(`- ${this.name.toUpperCase()} was last serviced ${this.lastServiced}\n- ${this.serviceUrgency()}`);
+    // console.log(this.serviceUrgency());
+  },
 }
+
+// declaring maintenance items
+const oil = Object.create(maintenanceItem);
+oil.name = "Oil";
+oil.lastServiced = "March 23 2023";
+oil.nextService = "June 23 2023";
+oil.needService = 0;
+const brakeFluid = Object.create(maintenanceItem);
+brakeFluid.name = "Brake Fluid";
+brakeFluid.lastServiced = "never";
+brakeFluid.nextService = "June 23 2023";
+brakeFluid.needService = 2;
+
+oil.logDetails();
+brakeFluid.logDetails();
 
 
 // Array Loops End
