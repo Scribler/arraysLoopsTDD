@@ -117,25 +117,34 @@ const maintenanceItem = {
     }
   },
   logDetails: function() {
-    console.log(`- ${this.name.toUpperCase()} was last serviced ${this.lastServiced}\n- ${this.serviceUrgency()}`);
-    // console.log(this.serviceUrgency());
+    // TO DO > if "name" ends with "s" change "was" to "were"
+    console.log(`- ${this.name.toUpperCase()} was last serviced ${this.lastServiced}\n- Next service is ${this.nextService}.\n- ${this.serviceUrgency()}`);
   },
+  toHTMLCards: function() {
+    // make cards
+  }
 }
 
 // declaring maintenance items
 const oil = Object.create(maintenanceItem);
 oil.name = "Oil";
 oil.lastServiced = "March 23 2023";
-oil.nextService = "June 23 2023";
+oil.nextService = "June 23 2024";
 oil.needService = 0;
 const brakeFluid = Object.create(maintenanceItem);
 brakeFluid.name = "Brake Fluid";
 brakeFluid.lastServiced = "never";
 brakeFluid.nextService = "June 23 2023";
 brakeFluid.needService = 2;
+const brakePads = Object.create(maintenanceItem);
+brakePads.name = "Brake Pads";
+brakePads.lastServiced = "June 1 2022";
+brakePads.nextService = "June 1 2023";
+brakePads.needService = 1;
 
 oil.logDetails();
 brakeFluid.logDetails();
+brakePads.logDetails();
 
 
 // Array Loops End
