@@ -131,11 +131,13 @@ oil.name = "Oil";
 oil.lastServiced = "March 23 2023";
 oil.nextService = "June 23 2024";
 oil.needService = 0;
+
 const brakeFluid = Object.create(maintenanceItem);
 brakeFluid.name = "Brake Fluid";
 brakeFluid.lastServiced = "never";
 brakeFluid.nextService = "June 23 2023";
 brakeFluid.needService = 2;
+
 const brakePads = Object.create(maintenanceItem);
 brakePads.name = "Brake Pads";
 brakePads.lastServiced = "June 1 2022";
@@ -145,9 +147,54 @@ brakePads.needService = 1;
 oil.logDetails();
 brakeFluid.logDetails();
 brakePads.logDetails();
+console.log(`Brakes pads were last serviced ${brakePads.lastServiced}.`);
 
+//
+// map() > runs a function on each element of the array.
+//
+function changeToUpperCase(string) {
+  return string.toUpperCase();
+}
+
+const myMapLoop = ["test", "best", "this", "ding"];
+const newLoopCapped = myMapLoop.map(changeToUpperCase);
+
+console.log(myMapLoop);
+console.log(newLoopCapped);
+
+//
+// filter() > runs a function THAT RETURNS A BOOLEAN on each element of the array and RETURNS THE 1's.
+//
+function doesHas(string) {
+  return string.includes('est');
+}
+const newFiltered = myMapLoop.filter(doesHas);
+console.log(newFiltered);
+const newestFilter = myMapLoop.filter((word) => word.includes('s'));
+console.log(newestFilter);
+
+for (const key in myMapLoop) {
+  console.log(`${myMapLoop[key]} is in array`);
+}
+
+// do code block at least once (as opposed to for loops and while loops which may never run)
+let dwile = 1;
+do {
+  console.log(`test ${dwile}`);
+  dwile ++;
+} while (dwile < 6);
 
 // Array Loops End
+
+//
+// LAUNCH COUNTDOWN START
+//
+
+console.log("Make launch countdown here");
+
+//
+// LAUNCH COUNTDOWN END
+//
 
 //
 // LOOPS AREA END
