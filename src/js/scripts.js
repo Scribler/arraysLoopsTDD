@@ -178,11 +178,6 @@ for (const key in myMapLoop) {
 }
 
 // do code block at least once (as opposed to for loops and while loops which may never run)
-let dwile = 1;
-do {
-  console.log(`test ${dwile}`);
-  dwile ++;
-} while (dwile < 6);
 
 // Array Loops End
 
@@ -191,6 +186,22 @@ do {
 //
 
 console.log("Make launch countdown here");
+const countdownOut = document.querySelector('.arrLoopOutput');
+const para = document.createElement('p');
+para.textContent = "Testing One Two Three";
+countdownOut.appendChild(para);
+let dwile = 1;
+do {
+  if (dwile == 11) {
+    para.textContent= `Lift Off`;
+    countdownOut.appendChild(para);
+    break;
+  }
+  console.log(`test ${dwile}`);
+  para.textContent= `Count Down ${dwile}`;
+  countdownOut.appendChild(para);
+  dwile ++;
+} while (dwile < 11);
 
 //
 // LAUNCH COUNTDOWN END
