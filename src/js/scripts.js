@@ -187,21 +187,21 @@ for (const key in myMapLoop) {
 
 console.log("Make launch countdown here");
 const countdownOut = document.querySelector('.arrLoopOutput');
-const para = document.createElement('p');
-para.textContent = "Testing One Two Three";
-countdownOut.appendChild(para);
-let dwile = 1;
+countdownOut.innerHTML = '';
+
+let dwile = 10;
 do {
-  if (dwile == 11) {
-    para.textContent= `Lift Off`;
-    countdownOut.appendChild(para);
-    break;
-  }
-  console.log(`test ${dwile}`);
+  const para = document.createElement('p');
   para.textContent= `Count Down ${dwile}`;
   countdownOut.appendChild(para);
-  dwile ++;
-} while (dwile < 11);
+  if (dwile === 0) {
+    para.textContent= `Lift Off`;
+    countdownOut.appendChild(para);
+    console.log("launch !!!");
+    // break;
+  }
+  dwile --;
+} while (dwile >= 0);
 
 //
 // LAUNCH COUNTDOWN END
