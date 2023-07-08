@@ -181,7 +181,6 @@ for (const key in myMapLoop) {
 
 // Array Loops End
 
-//
 // LAUNCH COUNTDOWN START
 //
 
@@ -205,7 +204,42 @@ do {
 
 //
 // LAUNCH COUNTDOWN END
+
+
+
+// GUEST LIST START (Admit all EXCEPT for 'Phil', and 'Lola')
 //
+
+// Select output 
+const guestOutput = document.querySelector('.guestListOut');
+// create heading 2 (blank)
+const h2 = document.createElement('h2');
+// give heading 2 content, then appendChild
+h2.textContent = "Guest List";
+// serve content to output.
+guestOutput.appendChild(h2);
+
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: ';
+
+// loop starts here
+
+// refused.textContent += ;
+// admitted.textContent += ;
+
+
+
+
+
+
+//
+// GUEST LIST END
+
 
 //
 // LOOPS AREA END
