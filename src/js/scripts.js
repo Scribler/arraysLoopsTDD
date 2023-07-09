@@ -184,7 +184,6 @@ for (const key in myMapLoop) {
 // LAUNCH COUNTDOWN START
 //
 
-console.log("Make launch countdown here");
 const countdownOut = document.querySelector('.arrLoopOutput');
 countdownOut.innerHTML = '';
 
@@ -210,24 +209,52 @@ do {
 // GUEST LIST START (Admit all EXCEPT for 'Phil', and 'Lola')
 //
 
-// Select output 
+// Select outputs
 const guestOutput = document.querySelector('.guestListOut');
 // create heading 2 (blank)
 const h2 = document.createElement('h2');
-// give heading 2 content, then appendChild
+const admitted = document.createElement('p');
+const refused= document.createElement('p');
+// give heading 2 and paragraphs, starter content
 h2.textContent = "Guest List";
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refused: ';
 // serve content to output.
 guestOutput.appendChild(h2);
+guestOutput.appendChild(admitted);
+guestOutput.appendChild(refused);
 
+// Array of possible admittees
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
-
-const admitted = document.querySelector('.admitted');
-const refused = document.querySelector('.refused');
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: ';
-
 // loop starts here
+// let arrPos = people.length - 1;
+// do {
+//   if (people[arrPos] === 'Phil' || people[arrPos] === 'Lola') {
+//     refused.textContent += `${people[arrPos]}, `;
+//   } else {
+//     admitted.textContent += `${people[arrPos]}, `;
+//   }
+//   console.log(`loop test array.length: ${arrPos}`);
+//   arrPos --;
+// } while (arrPos >= 0);
+
+
+let arrPos = people.length - 1;
+let admit = [];
+let refuse = [];
+
+for (const attendee of people) {
+  if (attendee === 'Phil' || attendee === 'Lola') {
+    refuse.push(` ${attendee}`);
+  } else {
+    admit.push(` ${attendee}`);
+  }
+}
+admitted.textContent += admit.join(", ");
+refused.textContent += refuse.join(", ");
+
+
 
 // refused.textContent += ;
 // admitted.textContent += ;
