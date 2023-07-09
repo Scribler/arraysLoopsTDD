@@ -227,42 +227,17 @@ guestOutput.appendChild(refused);
 // Array of possible admittees
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
-// loop starts here
-// let arrPos = people.length - 1;
-// do {
-//   if (people[arrPos] === 'Phil' || people[arrPos] === 'Lola') {
-//     refused.textContent += `${people[arrPos]}, `;
-//   } else {
-//     admitted.textContent += `${people[arrPos]}, `;
-//   }
-//   console.log(`loop test array.length: ${arrPos}`);
-//   arrPos --;
-// } while (arrPos >= 0);
-
-
 let arrPos = people.length - 1;
 let admit = [];
 let refuse = [];
 
 for (const attendee of people) {
-  if (attendee === 'Phil' || attendee === 'Lola') {
-    refuse.push(` ${attendee}`);
-  } else {
-    admit.push(` ${attendee}`);
-  }
+  // This could be done with an elseif statement, BUT nesting not as easy to read.
+  if (attendee === 'Phil' || attendee === 'Lola') refuse.push(` ${attendee}`);
+  if (attendee !== 'Phil' && attendee !== 'Lola') admit.push(` ${attendee}`);
 }
 admitted.textContent += admit.join(", ");
 refused.textContent += refuse.join(", ");
-
-
-
-// refused.textContent += ;
-// admitted.textContent += ;
-
-
-
-
-
 
 //
 // GUEST LIST END
