@@ -90,162 +90,20 @@ function drawLoop(color, repetitions) {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  circleColors.forEach(element => {
-    drawLoop(element, 20);
-  });
+  circleColors.forEach(element => drawLoop(element, 20));
   // drawLoop('blue', 20);
   // drawLoop('green', 20);
   // drawLoop('rgba(255,0,0,0.5)', 90);
 }
 
 btn.addEventListener("click", draw);
+//
 // Canvas Loops Area End
 
-// Array Loops 
-// --build cards for each input set--
-const maintenanceItem = {
-  serviceUrgency: function() {
-    // let urgency;
-    if (this.needService == 0) {
-      return "No service required at this time.";
-    } else if (this.needService == 1) {
-      return "Item needs servicing";
-    } else if (this.needService == 2) {
-      return "Service item IMMEDIATELY! URGENT!";
-    } else {
-      return "No value";
-    }
-  },
-  logDetails: function() {
-    // TO DO > if "name" ends with "s" change "was" to "were"
-    console.log(`- ${this.name.toUpperCase()} was last serviced ${this.lastServiced}\n- Next service is ${this.nextService}.\n- ${this.serviceUrgency()}`);
-  },
-  toHTMLCards: function() {
-    // make cards
-  }
-}
-
-// declaring maintenance items
-const oil = Object.create(maintenanceItem);
-oil.name = "Oil";
-oil.lastServiced = "March 23 2023";
-oil.nextService = "June 23 2024";
-oil.needService = 0;
-
-const brakeFluid = Object.create(maintenanceItem);
-brakeFluid.name = "Brake Fluid";
-brakeFluid.lastServiced = "never";
-brakeFluid.nextService = "June 23 2023";
-brakeFluid.needService = 2;
-
-const brakePads = Object.create(maintenanceItem);
-brakePads.name = "Brake Pads";
-brakePads.lastServiced = "June 1 2022";
-brakePads.nextService = "June 1 2023";
-brakePads.needService = 1;
-
-oil.logDetails();
-brakeFluid.logDetails();
-brakePads.logDetails();
-console.log(`Brakes pads were last serviced ${brakePads.lastServiced}.`);
-
-//
-// map() > runs a function on each element of the array.
-//
-function changeToUpperCase(string) {
-  return string.toUpperCase();
-}
-
-const myMapLoop = ["test", "best", "this", "ding"];
-const newLoopCapped = myMapLoop.map(changeToUpperCase);
-
-console.log(myMapLoop);
-console.log(newLoopCapped);
-
-//
-// filter() > runs a function THAT RETURNS A BOOLEAN on each element of the array and RETURNS THE 1's.
-//
-function doesHas(string) {
-  return string.includes('est');
-}
-const newFiltered = myMapLoop.filter(doesHas);
-console.log(newFiltered);
-const newestFilter = myMapLoop.filter((word) => word.includes('s'));
-console.log(newestFilter);
-
-for (const key in myMapLoop) {
-  console.log(`${myMapLoop[key]} is in array`);
-}
-
-// do code block at least once (as opposed to for loops and while loops which may never run)
-
-// Array Loops End
-
-// LAUNCH COUNTDOWN START
+// Loops Start
 //
 
-const countdownOut = document.querySelector('.arrLoopOutput');
-countdownOut.innerHTML = '';
-
-let dwile = 10;
-do {
-  const para = document.createElement('p');
-  para.textContent= `Count Down ${dwile}`;
-  countdownOut.appendChild(para);
-  if (dwile === 0) {
-    para.textContent= `Lift Off`;
-    countdownOut.appendChild(para);
-    console.log("launch !!!");
-    // break;
-  }
-  dwile --;
-} while (dwile >= 0);
-
 //
-// LAUNCH COUNTDOWN END
-
-
-
-// GUEST LIST START (Admit all EXCEPT for 'Phil', and 'Lola')
-//
-
-// Select outputs
-const guestOutput = document.querySelector('.guestListOut');
-// create heading 2 (blank)
-const h2 = document.createElement('h2');
-const admitted = document.createElement('p');
-const refused= document.createElement('p');
-// give heading 2 and paragraphs, starter content
-h2.textContent = "Guest List";
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refused: ';
-// serve content to output.
-guestOutput.appendChild(h2);
-guestOutput.appendChild(admitted);
-guestOutput.appendChild(refused);
-
-// Array of possible admittees
-const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
-
-let arrPos = people.length - 1;
-let admit = [];
-let refuse = [];
-
-for (const attendee of people) {
-  // This could be done with an elseif statement, BUT nesting not as easy to read.
-  if (attendee === 'Phil' || attendee === 'Lola') refuse.push(` ${attendee}`);
-  if (attendee !== 'Phil' && attendee !== 'Lola') admit.push(` ${attendee}`);
-}
-admitted.textContent += admit.join(", ");
-refused.textContent += refuse.join(", ");
-
-//
-// GUEST LIST END
-
-
-//
-// LOOPS AREA END
-//
-
+// Loops End
 
 
