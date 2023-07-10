@@ -103,6 +103,17 @@ btn.addEventListener("click", draw);
 // Loops Start
 //
 
+// variables
+const names = ['Dale', 'Gale', 'Dillon', 'Miki', 'Douglas', 'Thoms', 'Derek', 'Warik'];
+
+
+let i = names.length;
+while (i) {
+  console.log(`${names[i - 1]} is invited`);
+  i--;
+}
+
+
 //
 // Loops End
 
