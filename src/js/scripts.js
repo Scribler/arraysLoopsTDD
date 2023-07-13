@@ -112,7 +112,18 @@ while (i) {
   console.log(`${names[i - 1]} is invited`);
   i--;
 }
-
+console.log("//");
+console.log("//");
+console.log("//");
+let b = names.length;
+// This does the same thing as the below commented out code.
+while (b) console.log(`${b}) ${names[--b]}: is possibly invited.`);
+// let breaker = 0;
+// while (b) {
+//   console.log(`${b}) ${names[--b]}: is possibly invited.`);
+//   breaker++;
+//   if (breaker == 20) break;
+// }
 
 //
 // Loops End
