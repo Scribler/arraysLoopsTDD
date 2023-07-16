@@ -160,8 +160,23 @@ for (let i=0; i<10; i++) {
   console.log(`I is: ${i}`);
 }
 
-
 //
 // For Loops end
 
+// LOOP TEST START (Run a loop that keeps asking for input untill user enters 100 or more. Also exit loop if no input)
+//
+let inTest;
+while (inTest < 100 || isNaN(inTest)) {
+  inTest = parseInt(prompt("Enter a number"));
+  if (inTest >= 100) {
+    console.log(`${inTest}: is indeed 100 or more! Exiting.`)
+  } else if (isNaN(inTest) == false) {
+    console.log(`${inTest}: is less than 100. Try again!`)
+  } else {
+    console.log("No number entered. Exiting.");
+    break;
+  }
+}
 
+//
+// LOOP TEST END
