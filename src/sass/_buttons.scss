@@ -1,5 +1,5 @@
 // Buttons
-@use '../abstracts/variables' as *;
+@use './variables' as *;
 @mixin standard-button {
   padding: 20px 40px;
   background-color: var(--blue);

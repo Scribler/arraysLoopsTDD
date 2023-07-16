@@ -7,20 +7,12 @@
   --darker-grey: hsla(0, 0%, 50%, 1);
   --black: hsl(0, 0%, 22%);
 
-  // Flexbox Colors
-  --white: hsl(0, 0%, 100%);
-  --light-blue: hsl(210, 100%, 95%);
-  --dark-blue: hsl(214, 89%, 52%);
-  --flex-hero-main-text: #F9FAF8; // hero-heading
-  --flex-hero-secondary: #E5E7EB; // nav-button-hover-background
-  --flex-dark-background: #1F2937;// hero and footer
-
   // FONT-SIZES
-  --hero-fs: 2em;
-  --h1-fs: 2.5em;
-  --h2-fs: 2.0em;
-  --h3-fs: 1.5em;
-  --h4-fs: 1.3em;
+  --hero-fs: 180%;
+  --h1-fs: 160%;
+  --h2-fs: 145%;
+  --h3-fs: 120%;
+  --h4-fs: 110%;
 
   // Needle Felting Workshop
   --wool-beige: hsl(24, 27%, 74%);
@@ -28,3 +20,4 @@
   // ROCK PAPER SCISSORS VARIABLES
   --pixel-size: 5;
 }
+
