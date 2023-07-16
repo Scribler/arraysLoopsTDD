@@ -70,11 +70,26 @@ canvas {
   margin: 10px 0;
 }
 // Array Loops AREA
+// .loopOut {
+//   display: flex;
+//   flex-direction: column;
+// }
+.title {
+  width: 900px;
+}
+.listsArea {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
 
+.guestList {
+  padding: 30px;
+}
 
-
-
-
+.forLoopsContent {
+  padding: 30px;
+}
 
 
 

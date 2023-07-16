@@ -100,17 +100,68 @@ btn.addEventListener("click", draw);
 //
 // Canvas Loops Area End
 
-// Loops Start
+// While Loops Start
 //
 
 // variables
 const names = ['Dale', 'Gale', 'Dillon', 'Miki', 'Douglas', 'Thoms', 'Derek', 'Warik'];
-const inviteOut = document.querySelector('.loopOut');
+const invited = document.querySelector('#invited');
+const notInvited = document.querySelector('#notInvited');
 
 let i = names.length;
-while (i) inviteOut.innerHTML += (`<p>${names[--i]} is invited</p>`);
+while (i) {
+  --i;
+  if (names[i] == 'Gale' || names[i] == 'Warik') {
+    notInvited.innerHTML += `<p>${names[i]} is NOT invited</p>`;
+  } else {
+    invited.innerHTML += (`<p>${names[i]} is invited</p>`);
+  }
+}
 
 //
-// Loops End
+// While Loops End
+
+// For Loops Start
+//
+
+const forLoopsOutput = document.querySelector(".forLoopsContent");
+
+function oddRange(output) {
+  let oddNums = [];
+  // use these definitions for 'low' and 'high' if you want to prompt user for input.
+  // let low = parseInt(prompt("Low number?"));
+  // let high = parseInt(prompt("High number?"));
+  let low = 1;
+  let high = 8;
+  for (let i = low; i < high; i++) {
+    if (i % 2 == 0) continue;
+    oddNums.push(i);
+    i++;
+  }
+  if(low > high) {
+    output.innerHTML += (`<p>Invalid Range</p>`);
+  } else {
+    output.innerHTML += `<p>The Odd Numbers between ${low} and ${high} are: ${oddNums}</p>`;
+  }
+}
+oddRange(forLoopsOutput);
+
+let testA = 12;
+let testB = 22;
+(testA > testB) ? console.log("testA is bigger than testB") : console.log("TestA is smaller than Test B");
+
+// using labels ('outer' is the label for the outer for loop [can also be placed inline. ex. outer: for(i=...)])
+outer:
+for (let i=0; i<10; i++) {
+  while (i > 4 && i < 7) {
+    console.log("i is between 4 and 7")
+    break outer;
+  }
+  console.log(`I is: ${i}`);
+}
+
+
+//
+// For Loops end
 
 
