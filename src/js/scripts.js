@@ -138,7 +138,7 @@ function oddRange(output) {
     oddNums.push(i);
     i++;
   }
-  if(low > high) {
+if(low > high) {
     output.innerHTML += (`<p>Invalid Range</p>`);
   } else {
     output.innerHTML += `<p>The Odd Numbers between ${low} and ${high} are: ${oddNums}</p>`;
@@ -180,3 +180,32 @@ while (inTest < 100 || isNaN(inTest)) {
 
 //
 // LOOP TEST END
+
+// Output prime numbers Start (not divisible by 2, 3, 5, 7) (only by one and itself)
+//
+let primesToThis = parseInt(prompt("Enter ending number of range."));
+let primeIter = 2
+while (primeIter < primesToThis) {
+  if (primeIter % 2 == 0 || primeIter % 3 == 0 || primeIter % 5 == 0 || primeIter % 7 == 0) {
+    console.log("number is not prime");
+    console.log(primeIter);
+    primeIter++
+    console.log(primeIter);
+  }
+  // break;
+}
+
+
+
+
+//
+// Output prime numbers end
+
+
+
+
+
+
+
+
+
