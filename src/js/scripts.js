@@ -124,7 +124,7 @@ while (i) {
 // For Loops Start
 //
 
-const forLoopsOutput = document.querySelector(".forLoopsContent");
+const forLoopsOutput = document.querySelector("#forLoopsContent");
 
 function oddRange(output) {
   let oddNums = [];
@@ -165,35 +165,41 @@ for (let i=0; i<10; i++) {
 
 // LOOP TEST START (Run a loop that keeps asking for input untill user enters 100 or more. Also exit loop if no input)
 //
-let inTest;
-while (inTest < 100 || isNaN(inTest)) {
-  inTest = parseInt(prompt("Enter a number"));
-  if (inTest >= 100) {
-    console.log(`${inTest}: is indeed 100 or more! Exiting.`)
-  } else if (isNaN(inTest) == false) {
-    console.log(`${inTest}: is less than 100. Try again!`)
-  } else {
-    console.log("No number entered. Exiting.");
-    break;
-  }
-}
+
+// let inTest;
+// while (inTest < 100 || isNaN(inTest)) {
+//   inTest = parseInt(prompt("Enter a number"));
+//   if (inTest >= 100) {
+//     console.log(`${inTest}: is indeed 100 or more! Exiting.`)
+//   } else if (isNaN(inTest) == false) {
+//     console.log(`${inTest}: is less than 100. Try again!`)
+//   } else {
+//     console.log("No number entered. Exiting.");
+//     break;
+//   }
+// }
 
 //
 // LOOP TEST END
 
 // Output prime numbers Start (not divisible by 2, 3, 5, 7) (only by one and itself)
 //
-let primesToThis = parseInt(prompt("Enter ending number of range."));
-let primeIter = 2
+// let primesToThis = parseInt(prompt("Enter ending number of range."));
+let primesToThis = 20;
+let primeIter = 2;
+let primes = [];
+let nonPrimes = [];
 while (primeIter < primesToThis) {
-  if (primeIter % 2 == 0 || primeIter % 3 == 0 || primeIter % 5 == 0 || primeIter % 7 == 0) {
-    console.log("number is not prime");
-    console.log(primeIter);
+  if ((primeIter % 2 == 0 && primeIter !== 2) || (primeIter % 3 == 0 && primeIter !== 3) || (primeIter % 5 == 0 && primeIter !== 5) || (primeIter % 7 == 0 && primeIter !== 7)) {
+    nonPrimes.push(primeIter);
     primeIter++
-    console.log(primeIter);
+  } else {
+    primes.push(primeIter);
+    primeIter++
   }
-  // break;
 }
+console.log(`Primes: ${primes}`);
+console.log(`Non-primes: ${nonPrimes}`);
 
 
 
