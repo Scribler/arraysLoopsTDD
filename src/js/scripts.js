@@ -185,29 +185,35 @@ for (let i=0; i<10; i++) {
 // Output prime numbers Start (not divisible by 2, 3, 5, 7) (only by one and itself)
 //
 // let primesToThis = parseInt(prompt("Enter ending number of range."));
+const primesServe = document.querySelector("#primes");
 let primesToThis = 20;
-let primeIter = 2;
 let primes = [];
 let nonPrimes = [];
-while (primeIter < primesToThis) {
-  if ((primeIter % 2 == 0 && primeIter !== 2) || (primeIter % 3 == 0 && primeIter !== 3) || (primeIter % 5 == 0 && primeIter !== 5) || (primeIter % 7 == 0 && primeIter !== 7)) {
-    nonPrimes.push(primeIter);
-    primeIter++
-  } else {
-    primes.push(primeIter);
-    primeIter++
+
+
+nextPrime:
+for(let i = 2; i < primesToThis; i++) {
+  for(let j = 2; j < i; j++) {
+    if (i % j == 0) {
+      nonPrimes.push(i);
+      continue nextPrime // not prime
+    }
   }
+  primes.push(i);
 }
-console.log(`Primes: ${primes}`);
-console.log(`Non-primes: ${nonPrimes}`);
+primesServe.innerHTML += `<p>Primes: ${primes}</p>`;
+primesServe.innerHTML += `<p>Non Primes: ${nonPrimes}</p>`;
+//
+// Output prime numbers end
+
+// Test Driven Developement START
+//
 
 
 
 
 //
-// Output prime numbers end
-
-
+// Test Driven Developement END
 
 
 
