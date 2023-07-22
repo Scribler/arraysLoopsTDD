@@ -1,7 +1,7 @@
 // Reset/normalize
-@use './variables' as *;
+@use '../components' as *;
 
-html {
+html, body {
   box-sizing: border-box;
   background-color: var(--off-white);
   color: var(--black);

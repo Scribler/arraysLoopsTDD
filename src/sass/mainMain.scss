@@ -1,6 +1,5 @@
 // Main Sass file
-@use './reset'; 
-@use './variables';
-@use './header';
+@use 'structure';
+@use 'components';
 // PAGES
-@use './main';
+@use 'pages'
