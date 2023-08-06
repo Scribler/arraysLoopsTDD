@@ -206,14 +206,29 @@ primesServe.innerHTML += `<p>Non Primes: ${nonPrimes}</p>`;
 //
 // Output prime numbers end
 
-// Test Driven Developement START
+// Calculator START
 //
 
+console.log(" ")
+console.log("Calculator Start")
+console.log(" ")
 
+const firstNum = parseInt(prompt("Enter First Number"));
+const opperation = prompt("Enter opperation");
+const secondNum = parseInt(prompt("Enter Second Number"));
 
+const add = function (a, b, opperation) {
+  if (opperation == "+") {
+    console.log(`${a} ${opperation} ${b} equals ${a + b} `);
+    return a + b;
+  } else {
+    return "Can't be doin that bud!";
+  }
+}
 
+add(firstNum, secondNum, opperation);
 //
-// Test Driven Developement END
+// Calculator END
 
 
 
