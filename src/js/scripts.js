@@ -206,16 +206,30 @@ primesServe.innerHTML += `<p>Non Primes: ${nonPrimes}</p>`;
 //
 // Output prime numbers end
 
+// DOM MANIPULATION start
+//
+
+
+
+//
+// DOM MANIPULATION end
+
+
 // Calculator START
 //
 
 console.log(" ")
 console.log("Calculator Start")
 console.log(" ")
-
-const firstNum = parseInt(prompt("Enter First Number"));
-const opperation = prompt("Enter opperation");
-const secondNum = parseInt(prompt("Enter Second Number"));
+//
+//
+// UNCOMMENT THE LINES BELOW TO ACTIVATE PROMPTS
+//
+//
+//
+// const firstNum = parseInt(prompt("Enter First Number"));
+// const opperation = prompt("Enter opperation");
+// const secondNum = parseInt(prompt("Enter Second Number"));
 
 const add = function (a, b, opperation) {
   if (opperation == "+") {
@@ -226,12 +240,35 @@ const add = function (a, b, opperation) {
   }
 }
 
-add(firstNum, secondNum, opperation);
+// add(firstNum, secondNum, opperation);
 //
 // Calculator END
 
 
+// TESTING AREA START
+//
+const testDrivenDevelopementDiv = document.querySelectorAll(".tdd");
+const tddNodeListArray = [];
 
+for (let index = 0; index < testDrivenDevelopementDiv.length; index++) {
+  const element = testDrivenDevelopementDiv[index];
+  console.log(element);
+}
+console.log(testDrivenDevelopementDiv.length)
+
+const h3s = document.querySelectorAll("h3");
+console.log(h3s.length);
+h3s.forEach(function(input){console.log(input)});
+
+const spreadArray = [1, 9, 3, 4];
+const spreadFunc = function (a, b, c, d) {
+  return (a + b + c + d);
+}
+console.log(spreadFunc(...spreadArray));
+
+
+//
+// TESTING AREA END
 
 
 
