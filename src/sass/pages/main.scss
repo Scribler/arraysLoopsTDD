@@ -82,8 +82,12 @@ canvas {
   padding: 30px;
 }
 
-
-
+div li {
+  color: blue;
+}
+div > li {
+  color: green;
+}
 
 
 
