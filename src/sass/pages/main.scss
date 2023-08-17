@@ -82,13 +82,39 @@ canvas {
   padding: 30px;
 }
 
+// Dom Manipulation Start
+//
+#container {
+  color: green;
+}
+.display {
+  color: blue;
+}
+.controls {
+  color: purple;
+}
+#container > .controls { // #container.controls does not work (if no space use div.controls)
+  color: orange;
+}
+#idLabel, .classLabel {
+  color: red;
+}
+
+//
+// Dom Manipulation End
+
+
+
+// Testing Start
+//
 div li {
   color: blue;
 }
 div > li {
   color: green;
 }
-
+//
+// Testing End
 
 
 

@@ -208,9 +208,18 @@ primesServe.innerHTML += `<p>Non Primes: ${nonPrimes}</p>`;
 
 // DOM MANIPULATION start
 //
+console.log(" ")
+console.log(" ")
+console.log("Dom Manipulation Start")
+console.log(" ")
+
+const h3s = document.querySelectorAll("h3");
+h3s.forEach(function(input){console.log(input)});
 
 
-
+console.log(" ")
+console.log("Dom Manipulation End")
+console.log(" ")
 //
 // DOM MANIPULATION end
 
@@ -218,9 +227,6 @@ primesServe.innerHTML += `<p>Non Primes: ${nonPrimes}</p>`;
 // Calculator START
 //
 
-console.log(" ")
-console.log("Calculator Start")
-console.log(" ")
 //
 //
 // UNCOMMENT THE LINES BELOW TO ACTIVATE PROMPTS
@@ -247,47 +253,16 @@ const add = function (a, b, opperation) {
 
 // TESTING AREA START
 //
-const h3s = document.querySelectorAll("h3");
-h3s.forEach(function(input){console.log(input)});
+console.log(" ")
+console.log(" ")
+console.log("Testing Area Start")
+console.log(" ")
 
-const spreadArray = [1, 5, 3, 4];
-const spreadFunc = function (...myArgs){
-  console.log(`logging arg[0] before change ${arguments[0]}`);
-  arguments[0] = 2; // works as the arguments object CAN be updated.
-  console.log(`logging arg[0] after change ${arguments[0]}`);
 
-  console.log(`logging myArgs[0] before change ${arguments[0]}`);
-  myArgs[0] = 4; // Does NOT work as rest operators can NOT be updated.
-  console.log(`logging myArgs[0] afterchange ${arguments[0]}`);
 
-  let result = 0;
-  for (const number of myArgs) {
-    console.log(`adding myargs[${myArgs.indexOf(number)}]: ${number}`);
-    result += number;
-  }
-  for (const iterator of myArgs) {
-    console.log(iterator);
-  }
-  console.log(`arguments: ${arguments[0]}, ${arguments[1]}, ${arguments[2]}, ${arguments[3]}`);
-  console.log(`myArgs: ${myArgs}`);
-  return result;
-}
-console.log(spreadFunc(...spreadArray));
-
-console.log(' ');
-console.log("Using 'arguments' array with a variadic function.");
-console.log(' ');
-const variadicFunc = function () {
-  let largest = 0;
-  for (let index = 0; index < arguments.length; index++) {
-    const element = arguments[index];
-    if (element > largest) largest = element;
-    console.log(`element ${index} of arguments: ${element}`);
-  }
-  console.log(`Largest entered number = ${largest}`);
-}
-variadicFunc(1, 3, 5, 9, 2, 0);
-
+console.log(" ")
+console.log("Testing Area End")
+console.log(" ")
 //
 // TESTING AREA END
 
