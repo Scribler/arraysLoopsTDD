@@ -212,12 +212,24 @@ console.log(" ")
 console.log(" ")
 console.log("Dom Manipulation Start")
 console.log(" ")
-
-const h3s = document.querySelectorAll("h3");
-h3s.forEach(function(input){console.log(input)});
-const paragraphArray = [...document.querySelectorAll('p')];
-console.log(paragraphArray);
-
+//
+// Setting up variables start
+//
+const domManipulationContainer = document.querySelector('.domManipulationContainer'); // select container
+const domManipulation_mainHeadingH3 = document.createElement('h3');
+const domManipulation_ul = document.createElement('ul');
+const domManipulation_li = document.createElement('li');
+//
+// Modifying elements before adding.
+//
+// Dom Manipulation Heading
+domManipulation_mainHeadingH3.textContent = "Dom Manipulation Playground";
+domManipulation_mainHeadingH3.style.backgroundColor = 'green';
+domManipulation_mainHeadingH3.style.color = 'blue';
+domManipulation_mainHeadingH3.style.display = 'inline-block';
+// Dom Manipulation List
+// Adding Elements
+domManipulationContainer.appendChild(domManipulation_mainHeadingH3);
 
 
 console.log(" ")
@@ -261,6 +273,10 @@ console.log(" ")
 console.log("Testing Area Start")
 console.log(" ")
 
+const h3s = document.querySelectorAll("h3");
+h3s.forEach(function(input){console.log(input)});
+const paragraphArray = [...document.querySelectorAll('p')]; // turn node list into array
+console.log(paragraphArray);
 
 
 console.log(" ")
