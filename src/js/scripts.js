@@ -215,6 +215,9 @@ console.log(" ")
 
 const h3s = document.querySelectorAll("h3");
 h3s.forEach(function(input){console.log(input)});
+const paragraphArray = [...document.querySelectorAll('p')];
+console.log(paragraphArray);
+
 
 
 console.log(" ")
