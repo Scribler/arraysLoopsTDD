@@ -84,6 +84,18 @@ canvas {
 
 // Dom Manipulation Start
 //
+.domManipulation_paragraph {
+  background-color: purple;
+  color: yellow;
+  display: block;
+}
+//
+// Dom Manipulation End
+
+
+
+// Testing Start
+//
 #container {
   color: green;
 }
@@ -99,14 +111,6 @@ canvas {
 #idLabel, .classLabel {
   color: red;
 }
-
-//
-// Dom Manipulation End
-
-
-
-// Testing Start
-//
 div li {
   color: blue;
 }

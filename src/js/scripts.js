@@ -217,8 +217,9 @@ console.log(" ")
 //
 const domManipulationContainer = document.querySelector('.domManipulationContainer'); // select container
 const domManipulation_mainHeadingH3 = document.createElement('h3');
-const domManipulation_ul = document.createElement('ul');
-const domManipulation_li = document.createElement('li');
+const domManipulation_paragraphOne = document.createElement('p');
+// const domManipulation_ul = document.createElement('ul');
+// const domManipulation_li = document.createElement('li');
 //
 // Modifying elements before adding.
 //
@@ -227,9 +228,14 @@ domManipulation_mainHeadingH3.textContent = "Dom Manipulation Playground";
 domManipulation_mainHeadingH3.style.backgroundColor = 'green';
 domManipulation_mainHeadingH3.style.color = 'blue';
 domManipulation_mainHeadingH3.style.display = 'inline-block';
-// Dom Manipulation List
+// Dom Manipulation Paragraph
+domManipulation_paragraphOne.textContent = "This is paragraph one.";
+// domManipulation_paragraphOne.classList.add('domManipulation_paragraph');
+domManipulation_paragraphOne.classList.toggle('domManipulation_paragraph');
+// domManipulation_paragraphOne.classList.toggle('domManipulation_paragraph');
 // Adding Elements
 domManipulationContainer.appendChild(domManipulation_mainHeadingH3);
+domManipulationContainer.appendChild(domManipulation_paragraphOne);
 
 
 console.log(" ")
