@@ -212,30 +212,48 @@ console.log(" ")
 console.log(" ")
 console.log("Dom Manipulation Start")
 console.log(" ")
-//
-// Setting up variables start
-//
-const domManipulationContainer = document.querySelector('.domManipulationContainer'); // select container
-const domManipulation_mainHeadingH3 = document.createElement('h3');
-const domManipulation_paragraphOne = document.createElement('p');
-// const domManipulation_ul = document.createElement('ul');
-// const domManipulation_li = document.createElement('li');
-//
-// Modifying elements before adding.
-//
+// Setting up containers variables start
+const domManipulation_Container = document.querySelector('.domManipulationContainer'); // select container
+
+// Dom Manipulation SECONDARY DIV WITH CONTENTS
+//    1) create div with [border: black, backgroundColor: pink]
+//    2) add h1{I'm in a div}, &&, p{ME TOO!}
+//    3) append h1 & p to created div
+//    4) append to hardcoded html.
+
+const domManipulation_insertedDiv = document.createElement('div');
+domManipulation_insertedDiv.style.border = 'black 3px solid';
+domManipulation_insertedDiv.style.backgroundColor = 'pink';
+
+const domManipulation_inserted_h1 = document.createElement('h1');
+domManipulation_inserted_h1.textContent = "I'm in a div!";
+domManipulation_insertedDiv.appendChild(domManipulation_inserted_h1);
+
+const domManipulation_inserted_p = document.createElement('p');
+domManipulation_inserted_p.textContent = "ME TOO!";
+domManipulation_insertedDiv.appendChild(domManipulation_inserted_p);
+
+
 // Dom Manipulation Heading
+const domManipulation_mainHeadingH3 = document.createElement('h3');
 domManipulation_mainHeadingH3.textContent = "Dom Manipulation Playground";
 domManipulation_mainHeadingH3.style.backgroundColor = 'green';
 domManipulation_mainHeadingH3.style.color = 'blue';
 domManipulation_mainHeadingH3.style.display = 'inline-block';
+
+
 // Dom Manipulation Paragraph
+const domManipulation_paragraphOne = document.createElement('p');
 domManipulation_paragraphOne.textContent = "This is paragraph one.";
-// domManipulation_paragraphOne.classList.add('domManipulation_paragraph');
-domManipulation_paragraphOne.classList.toggle('domManipulation_paragraph');
-// domManipulation_paragraphOne.classList.toggle('domManipulation_paragraph');
-// Adding Elements
-domManipulationContainer.appendChild(domManipulation_mainHeadingH3);
-domManipulationContainer.appendChild(domManipulation_paragraphOne);
+domManipulation_paragraphOne.classList.add('domManipulation_paragraph'); // can use .toggle instead of .add
+
+
+//
+// Adding Elements to HTML
+//
+domManipulation_Container.appendChild(domManipulation_mainHeadingH3); // main heading
+domManipulation_Container.appendChild(domManipulation_paragraphOne); // first paragraph
+domManipulation_Container.appendChild(domManipulation_insertedDiv); // div containing h1 and p elements.
 
 
 console.log(" ")
