@@ -215,23 +215,6 @@ console.log(" ")
 // Setting up containers variables start
 const domManipulation_Container = document.querySelector('.domManipulationContainer'); // select container
 
-// Dom Manipulation SECONDARY DIV WITH CONTENTS
-//    1) create div with [border: black, backgroundColor: pink]
-//    2) add h1{I'm in a div}, &&, p{ME TOO!}
-//    3) append h1 & p to created div
-//    4) append to hardcoded html.
-
-const domManipulation_insertedDiv = document.createElement('div');
-domManipulation_insertedDiv.style.border = 'black 3px solid';
-domManipulation_insertedDiv.style.backgroundColor = 'pink';
-
-const domManipulation_inserted_h1 = document.createElement('h1');
-domManipulation_inserted_h1.textContent = "I'm in a div!";
-domManipulation_insertedDiv.appendChild(domManipulation_inserted_h1);
-
-const domManipulation_inserted_p = document.createElement('p');
-domManipulation_inserted_p.textContent = "ME TOO!";
-domManipulation_insertedDiv.appendChild(domManipulation_inserted_p);
 
 
 // Dom Manipulation Heading
@@ -247,6 +230,35 @@ const domManipulation_paragraphOne = document.createElement('p');
 domManipulation_paragraphOne.textContent = "This is paragraph one.";
 domManipulation_paragraphOne.classList.add('domManipulation_paragraph'); // can use .toggle instead of .add
 
+// Dom Manipulation SECONDARY DIV WITH CONTENTS
+//    1) create div with [border: black, backgroundColor: pink]
+//    2) add h1{I'm in a div}, &&, p{ME TOO!}
+//    3) append h1 & p to created div
+//    4) append to hardcoded html.
+const domManipulation_insertedDiv = document.createElement('div'); // div
+domManipulation_insertedDiv.style.border = 'black 3px solid';
+domManipulation_insertedDiv.style.backgroundColor = 'pink';
+
+const domManipulation_inserted_h1 = document.createElement('h1'); // h1 and content then append
+domManipulation_inserted_h1.textContent = "I'm in a div!";
+domManipulation_insertedDiv.appendChild(domManipulation_inserted_h1);
+
+const domManipulation_inserted_p = document.createElement('p'); // p and content then append
+domManipulation_inserted_p.textContent = "ME TOO!";
+domManipulation_insertedDiv.appendChild(domManipulation_inserted_p);
+
+// DomManipulation_button
+const domManipulation_button = document.createElement('button');
+domManipulation_button.setAttribute('id', 'domManipulation_button');
+domManipulation_button.textContent = 'Click me. ;)';
+domManipulation_button.onclick = () => {
+  if (domManipulation_button.textContent == 'Click me. ;)') {
+    domManipulation_button.textContent = 'Ouch!!!';
+  } else {
+    domManipulation_button.textContent = 'Click me. ;)';
+  }
+}
+domManipulation_insertedDiv.appendChild(domManipulation_button);
 
 //
 // Adding Elements to HTML
@@ -302,6 +314,30 @@ h3s.forEach(function(input){console.log(input)});
 const paragraphArray = [...document.querySelectorAll('p')]; // turn node list into array
 console.log(paragraphArray);
 
+console.log(' ');
+console.log('Callback Functions Start');
+console.log(' ');
+
+const callbackArray = [1, 2, 3];
+
+function doOpperation (array, opperationFunc) { // main function utilizing callback function.
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    console.log(`Result of ${opperationFunc.name} on array element ${index} is: ${opperationFunc(element)}`);
+  }
+}
+
+const increase = function(arrayElement) { return (parseInt(arrayElement) + 2)}
+const decrease = function(arrayElement) { return (parseInt(arrayElement) - 2)}
+
+console.log('increase by 2');
+doOpperation(callbackArray, increase);
+console.log('decrease by 2');
+doOpperation(callbackArray, decrease);
+
+console.log(' ');
+console.log('Callback Functions End');
+console.log(' ');
 
 console.log(" ")
 console.log("Testing Area End")
