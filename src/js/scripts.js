@@ -302,18 +302,6 @@ const add = function (a, b, opperation) {
 // Calculator END
 
 
-// TESTING AREA START
-//
-console.log(" ")
-console.log(" ")
-console.log("Testing Area Start")
-console.log(" ")
-
-const h3s = document.querySelectorAll("h3");
-h3s.forEach(function(input){console.log(input)});
-const paragraphArray = [...document.querySelectorAll('p')]; // turn node list into array
-console.log(paragraphArray);
-
 console.log(' ');
 console.log('Callback Functions Start');
 console.log(' ');
@@ -339,9 +327,44 @@ console.log(' ');
 console.log('Callback Functions End');
 console.log(' ');
 
+// TESTING AREA START
+//
+console.log(" ")
+console.log(" ")
+console.log("Testing Area Start")
+console.log(" ")
+
+
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    console.log(`You clicked button: ${button.id}`);
+    console.log(`This is the 'e' variable?: ${e}`);
+  });
+  button.addEventListener('mousedown', () => {
+    console.log('The mouse button is compressed now.');
+  });
+  button.addEventListener('mouseup', () => {
+    console.log('The mouse button is depressed now.');
+  });
+});
+
+
 console.log(" ")
 console.log("Testing Area End")
 console.log(" ")
+
+function runPrintOne (printFunc) {
+  printFunc();
+}
+
+runPrintOne(myPrintFunc);
+
+function myPrintFunc () {
+  console.log("stuff");
+}
 //
 // TESTING AREA END
 
