@@ -341,7 +341,9 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => {
     console.log(`You clicked button: ${button.id}`);
-    console.log(`This is the 'e' variable?: ${e}`);
+    console.log(`This is 'e' automatically fed to the function: ${e}`);
+    console.log(`This is 'e.target'?: ${e.target}`);
+    e.target.classList.toggle("yellowAndBlue");
   });
   button.addEventListener('mousedown', () => {
     console.log('The mouse button is compressed now.');
