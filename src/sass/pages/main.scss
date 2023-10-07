@@ -42,62 +42,6 @@ section {
   margin: 10px 0 30px;
 }
 
-#arrayOutput p {
-  padding: 5px 0 5px 25px;
-}
-
-.posAnswer {
-  color: green;
-}
-.negAnswer {
-  color: red;
-}
-
-// CANVAS AREA
-canvas {
-  height: 250px;
-  width: 550px;
-  background-color: beige;
-  margin: 10px 0;
-}
-// Array Loops AREA
-// .loopOut {
-//   display: flex;
-//   flex-direction: column;
-// }
-.title {
-  width: 900px;
-}
-.listsArea {
-  display: flex;
-  flex-direction: row;
-  width: 900px;
-}
-
-.guestList {
-  padding: 30px;
-}
-
-.contentSection {
-  padding: 30px;
-}
-
-// Dom Manipulation Start
-//
-.domManipulation_paragraph {
-  background-color: purple;
-  color: yellow;
-  display: block;
-}
-#domManipulation_button {
-  padding: 10px 30px;
-  background-color: teal;
-  border-radius: 10px;
-}
-//
-// Dom Manipulation End
-
-
 
 // Testing Start
 //
