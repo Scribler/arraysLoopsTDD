@@ -1,33 +1,40 @@
 @use '../components' as *;
 
-.main {
-  height: 100vh;
-  width: 100vw;
+body {
+  min-height: 100vh;
+  // width: 100vw;
 }
 .mainHeroHeading {
-  padding: 30px 0;
+  padding: 0.9rem 0;
   text-align: center;
 }
 html {
   font-family:  Verdana, Geneva, sans-serif;
 }
+
 .header-heading {
   font-size: var(--hero-fs);
+  line-height: var(--hero-lh);
 }
 h1 {
   font-size: var(--h1-fs);
+  line-height: var(--h1-lh);
 }
 h2 {
   font-size: var(--h2-fs);
+  line-height: var(--h2-lh);
 }
 h3 {
   font-size: var(--h3-fs);
+  line-height: var(--h3-lh);
 }
 h4 {
   font-size: var(--h4-fs);
+  line-height: var(--h4-lh);
 }
 p {
-  font-size: 100%;
+  font-size: var(--p-fs);
+  line-height: var(--p-lh);
 }
 section {
   padding: 0 20px 20px;
@@ -41,47 +48,5 @@ section {
   text-align: center;
   margin: 10px 0 30px;
 }
-
-
-// Testing Start
-//
-#container {
-  color: green;
-}
-.display {
-  color: blue;
-}
-.controls {
-  color: purple;
-}
-#container > .controls { // #container.controls does not work (if no space use div.controls)
-  color: orange;
-}
-#idLabel, .classLabel {
-  color: red;
-}
-div li {
-  color: blue;
-}
-div > li {
-  color: green;
-}
-h3 + p { // first paragraphy following an h3 is blue
-  color: blue;
-}
-//
-// Testing End
-.yellowAndBlue {
-  background-color: yellow;
-  color: blue;
-}
-
-
-
-
-
-
-
-
 
 
